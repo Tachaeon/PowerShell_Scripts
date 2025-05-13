@@ -15,7 +15,7 @@ Write-Log "---- Starting VLC Install ----"
 
 try {
     $baseListingUrl = "https://get.videolan.org/vlc/last/win64/"
-    $html = Invoke-WebRequest -Uri $baseListingUrl
+    $html = Invoke-WebRequest -Uri $baseListingUrl -UseBasicParsing
 
     $regexPattern = "vlc-(\d+\.\d+\.\d+)-win64\.exe"
     $match = [regex]::Match($html.Content, $regexPattern)
