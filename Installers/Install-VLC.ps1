@@ -1,5 +1,5 @@
 if (-Not (Test-Path -Path 'C:\Install')) { New-Item -Path 'C:\Install' -ItemType Directory }
-$LogPath = "C:\Install\IntuneAppInstall.log"
+$LogPath = "C:\Install\App_Install.log"
 
 function Write-Log {
     param (
